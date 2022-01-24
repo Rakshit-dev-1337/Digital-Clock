@@ -14,7 +14,7 @@ body {
 .container {
     color: var(--blue-color);
     font-family: Lexend Exa, sans-serif;
-    font-size: 4.4rem;
+    font-size: 5vw;
     position: absolute;
     top: 50%;
     left: 50%;
