@@ -7,9 +7,9 @@ function digitalTime() {
     var amPm = document.getElementById("am-pm")
 
     if (h >= 12) {
-        session.innerHTML = "PM";
+        amPm.innerHTML = "PM";
     } else {
-        session.innerHTML = "AM";
+        amPm.innerHTML = "AM";
     }
 
     if (h > 12) {
