@@ -1,1 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap');
+
+:root {
+    --gray-color: #343A40;
+    --blue-color: #007BFF;
+}
+
+body {
+    background-color: var(--gray-color);
+    margin: 0%;
+    padding: 0%;
+}
+
+.container {
+    color: var(--blue-color);
+    font-family: Lexend Exa, sans-serif;
+    font-size: 4.4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

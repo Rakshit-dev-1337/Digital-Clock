@@ -1,8 +1,24 @@
-setInterval(digitalTime, 100);
-
 function digitalTime() {
-    var time = new Date();
-    var h = time.getHours();
-    var m = time.getMinutes();
-    var s = time.getSeconds();
+    var dateTime = new Date();
+    var h = dateTime.getHours();
+    var m = dateTime.getMinutes();
+    var s = dateTime.getSeconds();
+
+    var amPm = document.getElementById("am-pm")
+
+    if (h >= 12) {
+        session.innerHTML = "PM";
+    } else {
+        session.innerHTML = "AM";
+    }
+
+    if (h > 12) {
+        h = h - 12
+    }
+
+    document.getElementById("hours").innerHTML = h;
+    document.getElementById("minutes").innerHTML = m;
+    document.getElementById("seconds").innerHTML = s;
 }
+
+setInterval(digitalTime, 50);
