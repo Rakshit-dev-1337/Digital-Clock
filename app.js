@@ -1,17 +1,24 @@
 function digitalTime() {
     var dateTime = new Date();
     var h = dateTime.getHours();
-    var m = dateTime.getMinutes().toString().padStart(2, '0');
-    var s = dateTime.getSeconds().toString().padStart(2, '0');
+    var m = dateTime.getMinutes();
+    var s = dateTime.getSeconds();
 
-    h = h > 12 ? h - 12 : h;
-    h = h.toString().padStart(2, '0');
-    var amPm = h >= 12 ? "PM" : "AM";
+    var amPm = document.getElementById("am-pm")
 
-    var amPmEl = document.getElementById("am-pm");
-    var hoursEl = document.getElementById("hours");
+    if (h >= 12) {
+        amPm.innerHTML = "PM";
+    } else {
+        amPm.innerHTML = "AM";
+    }
 
-    hoursEl.innerHTML = `${h}:${m}:${s} ${amPm}`;
+    if (h > 12) {
+        h = h - 12
+    }
+
+    document.getElementById("hours").innerHTML = h;
+    document.getElementById("minutes").innerHTML = m;
+    document.getElementById("seconds").innerHTML = s;
 }
 
 setInterval(digitalTime, 50);
