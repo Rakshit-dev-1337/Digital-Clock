@@ -7,12 +7,11 @@ function digitalTime() {
     h = h > 12 ? h - 12 : h;
     h = h.toString().padStart(2, '0');
     var amPm = h >= 12 ? "PM" : "AM";
+
+    var amPmEl = document.getElementById("am-pm");
+    var hoursEl = document.getElementById("hours");
+
+    hoursEl.innerHTML = `${h}:${m}:${s} ${amPm}`;
 }
 
-var amPmEl = document.getElementById("am-pm");
-var hoursEl = document.getElementById("hours");
-
-setInterval(function(){
-    digitalTime();
-    hoursEl.innerHTML = `${h}:${m}:${s} ${amPm}`;
-}, 50);
+setInterval(digitalTime, 50);
